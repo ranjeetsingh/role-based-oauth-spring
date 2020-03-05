@@ -15260,3 +15260,29 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2020-03-05 16:10:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2020-03-05 16:15:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
 2020-03-05 16:20:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:25:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:30:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:35:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:40:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:45:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:50:28 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2020-03-05 16:51:32 INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-03-05 16:51:32 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application ROLE-BASED-USER-SERVICE with eureka with status DOWN
+2020-03-05 16:51:32 WARN  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1583407292376, current=DOWN, previous=UP]
+2020-03-05 16:51:32 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROLE-BASED-USER-SERVICE/host.docker.internal:role-based-user-service:8082: registering service...
+2020-03-05 16:51:32 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROLE-BASED-USER-SERVICE/host.docker.internal:role-based-user-service:8082 - registration status: 204
+2020-03-05 16:51:32 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-05 16:51:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-05 16:51:32 INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2020-03-05 16:51:35 INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2020-03-05 16:51:35 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROLE-BASED-USER-SERVICE/host.docker.internal:role-based-user-service:8082 - deregister  status: 200
+2020-03-05 16:51:35 INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2020-03-05 16:51:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-03-05 16:51:35 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-03-05 16:51:35 INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8082"]
+2020-03-05 16:51:35 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-03-05 16:51:35 INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8082"]
+2020-03-05 16:51:35 INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8082"]
+2020-03-05 16:54:44 INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.devglan.rolebasedoauth2.RoleBasedOauth2ApplicationTests], using SpringBootContextLoader
+2020-03-05 16:54:44 INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.devglan.rolebasedoauth2.RoleBasedOauth2ApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-03-05 16:54:44 INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.devglan.rolebasedoauth2.RoleBasedOauth2ApplicationTests]: RoleBasedOauth2ApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.

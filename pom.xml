@@ -14,12 +14,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>role-based-oauth2</name>
 	<description>Demo project for Spring Boot</description>
-
+	
 	<packaging>war</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
-	</properties>
+        <maven.test.skip>true</maven.test.skip>    <!-- For generate war file, Skipping Unit Test  -->
+    </properties>
 
 	<dependencies>
 		<dependency>
