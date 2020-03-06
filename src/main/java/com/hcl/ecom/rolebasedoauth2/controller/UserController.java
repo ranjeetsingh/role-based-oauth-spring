@@ -46,7 +46,7 @@ public class UserController {
     @Secured({ROLE_ADMIN, ROLE_USER, ROLE_CLIENT})
     @GetMapping(value = "/{id}")
     public ApiResponse getUser(@PathVariable long id){
-        log.info(String.format("received request to update user %s", authenticationFacadeService.getAuthentication().getPrincipal()));
+        log.info(String.format("received request to get user %s", authenticationFacadeService.getAuthentication().getPrincipal()));
         return new ApiResponse(HttpStatus.OK, SUCCESS, userService.findOne(id));
     }
 
@@ -76,6 +76,11 @@ public class UserController {
     	 log.info(String.format("received request to login user %s", authenticationFacadeService.getAuthentication().getPrincipal()));
     	 return new ApiResponse(HttpStatus.OK, SUCCESS, ""+userService.authentication(username, password));
 	  	
+    }
+    
+    @GetMapping("/test")
+    public String test() {
+    	return "test here";
     }
     
 

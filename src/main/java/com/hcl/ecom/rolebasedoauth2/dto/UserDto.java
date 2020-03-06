@@ -2,6 +2,8 @@ package com.hcl.ecom.rolebasedoauth2.dto;
 
 import java.util.List;
 
+import org.springframework.data.annotation.Transient;
+
 public class UserDto {
 
     private long id;
