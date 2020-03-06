@@ -100,6 +100,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         userDto.getRole().stream().map(role -> roleTypes.add(RoleType.valueOf(role)));
         user.setRoles(roleDao.find(userDto.getRole()));
         userDao.save(user);
+        User userInfo = userDao.findByUsername(userDto.getUsername());
+        userDto.setId(userInfo.getId());
         return userDto;
     }
 
@@ -142,6 +144,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 		boolean login = false;
 		User existedUser = userDao.findByUsername(username);
 		if (existedUser != null) {
+			log.info("user information :"+existedUser.getEmail());
 			if (existedUser.getPassword().equals(passwordEncoder.encode(password))) {
 				login = true;
 			}

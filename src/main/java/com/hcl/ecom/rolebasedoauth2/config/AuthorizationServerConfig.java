@@ -13,19 +13,12 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
+import com.hcl.ecom.rolebasedoauth2.util.AppConstatnt;
+
+
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
-
-	private static final String CLIEN_ID = "hcl-client";
-	private static final String CLIENT_SECRET = "abc123";
-	private static final String GRANT_TYPE_PASSWORD = "password";
-	private static final String AUTHORIZATION_CODE = "authorization_code";
-	private static final String REFRESH_TOKEN = "refresh_token";
-	private static final String IMPLICIT = "implicit";
-	private static final String SCOPE_READ = "read";
-	private static final String SCOPE_WRITE = "write";
-	private static final String TRUST = "trust";
 
 	@Autowired
 	private AuthenticationManager authenticationManager;
@@ -50,10 +43,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
 		configurer
 				.inMemory()
-				.withClient(CLIEN_ID)
-				.secret(passwordEncoder.encode(CLIENT_SECRET))
-				.authorizedGrantTypes(GRANT_TYPE_PASSWORD, AUTHORIZATION_CODE, REFRESH_TOKEN, IMPLICIT )
-				.scopes(SCOPE_READ, SCOPE_WRITE, TRUST);
+				.withClient(AppConstatnt.CLIENT_ID)
+				.secret(passwordEncoder.encode(AppConstatnt.CLIENT_SECRET))
+				.authorizedGrantTypes(AppConstatnt.GRANT_TYPE_PASSWORD, AppConstatnt.AUTHORIZATION_CODE, AppConstatnt.REFRESH_TOKEN, AppConstatnt.IMPLICIT )
+				.scopes(AppConstatnt.SCOPE_READ, AppConstatnt.SCOPE_WRITE, AppConstatnt.TRUST);
 	}
 
 	@Override

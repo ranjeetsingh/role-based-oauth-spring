@@ -14,13 +14,13 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>role-based-oauth2</name>
 	<description>Demo project for Spring Boot</description>
-	
+
 	<packaging>war</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
-        <maven.test.skip>true</maven.test.skip>    <!-- For generate war file, Skipping Unit Test  -->
-    </properties>
+		<maven.test.skip>true</maven.test.skip>    <!-- For generate war file, Skipping Unit Test -->
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -65,6 +65,15 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 			<version>2.1.4.RELEASE</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-sample-java -->
+		<dependency>
+			<groupId>org.codehaus.cargo</groupId>
+			<artifactId>cargo-sample-java</artifactId>
+			<version>1.7.10</version>
+			<scope>test</scope>
+		</dependency>
+
 
 	</dependencies>
 

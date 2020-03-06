@@ -13,6 +13,11 @@ public class ApiResponse {
 	    this.message = message;
 	    this.result = result;
     }
+	public ApiResponse(HttpStatus status, String message, boolean result){
+	    this.status = status.value();
+	    this.message = message;
+	    this.result = ""+result;
+    }
 
     public ApiResponse(HttpStatus status, String message){
         this.status = status.value();
@@ -42,6 +47,8 @@ public class ApiResponse {
     public void setResult(Object result) {
         this.result = result;
     }
+    
+    
 
     @Override
 	public String toString() {

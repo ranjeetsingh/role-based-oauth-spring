@@ -65,16 +65,16 @@ public class UserController {
 	}
 	
     @Secured({ROLE_USER, ROLE_CLIENT})
-	@PutMapping("/users/changePassword/{id}")
+	@PutMapping("/changePassword/{id}")
 	public ApiResponse changePassword(@RequestBody(required = true) String oldPassword,@RequestBody(required = true) String newPassword, @PathVariable long id) {
     	 log.info(String.format("received request to update user password %s", authenticationFacadeService.getAuthentication().getPrincipal()));
-    	 return new ApiResponse(HttpStatus.OK, SUCCESS, ""+userService.changePassword(oldPassword, newPassword, id));
+    	 return new ApiResponse(HttpStatus.OK, SUCCESS, userService.changePassword(oldPassword, newPassword, id));
 	}
     @Secured({ROLE_USER, ROLE_CLIENT})
-	@PutMapping("/users/login")
-    public ApiResponse authenticate(@RequestBody(required = true) String username, @RequestBody(required = true) String password) {
+	@PostMapping("/login")
+    public ApiResponse authenticate(@RequestParam(value = "username", required = false) String username, @RequestParam String password) {
     	 log.info(String.format("received request to login user %s", authenticationFacadeService.getAuthentication().getPrincipal()));
-    	 return new ApiResponse(HttpStatus.OK, SUCCESS, ""+userService.authentication(username, password));
+    	 return new ApiResponse(HttpStatus.OK, SUCCESS, userService.authentication(username, password));
 	  	
     }
     
