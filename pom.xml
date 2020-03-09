@@ -66,6 +66,13 @@
 			<version>2.1.4.RELEASE</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-sample-java -->
 		<dependency>
 			<groupId>org.codehaus.cargo</groupId>

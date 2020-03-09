@@ -147,6 +147,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 			log.info("user information :"+existedUser.getEmail());
 			if (existedUser.getPassword().equals(passwordEncoder.encode(password))) {
 				login = true;
+			} else {
+				login = false;
 			}
 		} else {
 			login = false;

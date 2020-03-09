@@ -72,7 +72,7 @@ public class UserController {
 	}
     @Secured({ROLE_USER, ROLE_CLIENT})
 	@PostMapping("/login")
-    public ApiResponse authenticate(@RequestParam(value = "username", required = false) String username, @RequestParam String password) {
+    public ApiResponse authenticate(@RequestParam String username, @RequestParam String password) {
     	 log.info(String.format("received request to login user %s", authenticationFacadeService.getAuthentication().getPrincipal()));
     	 return new ApiResponse(HttpStatus.OK, SUCCESS, userService.authentication(username, password));
 	  	
